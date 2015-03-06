@@ -62,11 +62,11 @@ public class MenuActivity extends ActionBarActivity implements AbsListView.OnScr
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Log.d("Clicked number item", "Item " + position );
+//                Log.d("Clicked number item", "Item " + position );
                 //Toast.makeText(MenuActivity.this, "You Clicked at " + web[+position], Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(MenuActivity.this, PlayVideoActivity.class);
-//                intent.putExtra("id", youtube_id[position]);
-//                startActivity(intent);
+                Intent intent = new Intent(MenuActivity.this, PlayVideoActivity.class);
+                intent.putExtra("id", youtube_id.get(position));
+                startActivity(intent);
             }
         });
     }
